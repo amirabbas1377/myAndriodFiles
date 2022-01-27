@@ -5,6 +5,6 @@
     <dimen name="height_of_information_texts">60dp</dimen>
     <dimen name="length_of_information_texts">280dp</dimen>
     <dimen name="padding_edit_text">10dp</dimen>
-    <dimen name="margin_edit_text">30dp</dimen>
+    <dimen name="margin_edit_text">20dp</dimen>
     <dimen name="elevation_button">5dp</dimen>
 </resources>

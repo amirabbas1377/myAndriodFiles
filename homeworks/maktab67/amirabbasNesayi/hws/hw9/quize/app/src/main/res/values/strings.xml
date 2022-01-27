@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Quiz</string>
+    <string name="cheating_text">Are you sure you wanna do this?</string>
 </resources>
