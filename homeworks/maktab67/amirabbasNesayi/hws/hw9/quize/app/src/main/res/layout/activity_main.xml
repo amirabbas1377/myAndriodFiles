@@ -11,81 +11,89 @@
         android:id="@+id/question_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:gravity="center"
         android:padding="@dimen/padding"
         android:textColor="#000000"
         android:textSize="@dimen/sizes_text_buttons"
-        app:layout_constraintBottom_toTopOf="@+id/true_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/true_button"
         android:layout_width="@dimen/length_buttons"
         android:layout_height="@dimen/height_buttons"
-        android:layout_margin="@dimen/margin"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:padding="@dimen/padding"
         android:text="TRUE"
         android:textSize="@dimen/sizes_text_buttons"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/false_button"
         android:layout_width="@dimen/length_buttons"
         android:layout_height="@dimen/height_buttons"
-        android:layout_margin="@dimen/margin"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:padding="@dimen/padding"
         android:text="FALSE"
         android:textSize="@dimen/sizes_text_buttons"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline2" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/cheat_button"
         android:layout_width="@dimen/length_buttons"
         android:layout_height="@dimen/height_buttons"
-        android:layout_margin="@dimen/margin"
         android:gravity="center"
         android:padding="@dimen/padding"
         android:text="CHEAT"
         android:textSize="@dimen/sizes_text_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/next_button"
         android:layout_width="@dimen/length_buttons"
         android:layout_height="@dimen/height_buttons"
-        android:layout_margin="@dimen/margin"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:padding="@dimen/padding"
         android:text="NEXT"
         android:textSize="@dimen/sizes_text_buttons"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.339"
+        app:icon="@android:drawable/ic_media_ff"
+        app:iconGravity="end"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/previous_button"
         android:layout_width="@dimen/length_buttons"
         android:layout_height="@dimen/height_buttons"
-        android:layout_margin="@dimen/margin"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:gravity="center"
         android:padding="@dimen/padding"
         android:text="PREV"
         android:textSize="@dimen/sizes_text_buttons"
+        app:icon="@android:drawable/ic_media_rew"
+        app:iconGravity="textStart"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.552"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -93,21 +101,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="205dp" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="469dp" />
+        app:layout_constraintGuide_percent="0.6" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="381dp" />
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

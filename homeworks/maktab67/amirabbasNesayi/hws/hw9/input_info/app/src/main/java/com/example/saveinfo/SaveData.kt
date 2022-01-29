@@ -25,10 +25,11 @@ class SaveData:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val data = getData()
-
-        save_data_button.setOnClickListener {
-            this.activity?.let { it1 -> setPrefValues(data, it1) }
+        if(savedInstanceState == null){
+            val data = getData()
+            save_data_button.setOnClickListener {
+                this.activity?.let { it1 -> setPrefValues(data, it1) }
+            }
         }
     }
 

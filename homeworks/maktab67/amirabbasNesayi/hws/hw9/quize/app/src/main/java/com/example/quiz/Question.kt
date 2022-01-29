@@ -12,4 +12,4 @@ package com.example.quiz
     ,Pair("""I am a android app""", true)
     )
 
-var isClickCheating = 0
+

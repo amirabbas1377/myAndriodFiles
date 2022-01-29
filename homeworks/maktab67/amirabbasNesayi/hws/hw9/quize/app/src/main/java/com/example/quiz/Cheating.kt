@@ -16,9 +16,9 @@ class Cheating : AppCompatActivity() {
         val binding = CheatingLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var answer = intent.getStringExtra("answer")
+        var answer = intent.getBooleanExtra("answer", false)
         if (answer != null) {
-            cheating(answer)
+            cheating(answer.toString())
         }
     }
 
@@ -30,8 +30,10 @@ class Cheating : AppCompatActivity() {
             textView.visibility = View.INVISIBLE
             textView.text = answer
             textView.visibility = View.VISIBLE
-            isClickCheating++
-            Log.d("TAG", "$isClickCheating in cheating")
+            val intent = Intent()
+            intent.putExtra("result", true)
+            setResult(RESULT_OK, intent)
+            //finish()
         }
     }
 }

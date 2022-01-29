@@ -28,7 +28,9 @@ class GetData : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        this.activity?.let { catchData(it) }
+        if (savedInstanceState == null){
+            this.activity?.let { catchData(it) }
+        }
     }
 
     private fun catchData(activity: Context){
@@ -42,7 +44,7 @@ class GetData : Fragment(){
             val rePassword = re_password_editor.text.toString()
 
             var selectGender = radio_group.checkedRadioButtonId
-            val gender = if (selectGender == 2131230911) "Male" else "Female"
+            val gender = if (male_radio_button.isChecked) "Male" else "Female"
 
             if (fullName == "") Toast.makeText(activity, "enter your name", Toast.LENGTH_SHORT).show()
             else if(username == "") Toast.makeText(activity, "enter your username", Toast.LENGTH_SHORT).show()
