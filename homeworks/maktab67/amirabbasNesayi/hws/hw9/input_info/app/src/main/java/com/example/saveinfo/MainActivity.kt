@@ -1,20 +1,20 @@
 package com.example.saveinfo
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toolbar
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-            val fragment = GetData()
-            supportFragmentManager
-                .beginTransaction()
-                .add(R.id.fragment1, fragment)
-                .addToBackStack(null)
-                .commitAllowingStateLoss()
+        if (savedInstanceState == null){
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add<GetData>(R.id.fragment_container_get)
+            }
+        }
     }
 }
