@@ -52,5 +52,4 @@ class GetData : Fragment(R.layout.get_data){
             }
         }
     }
-
 }

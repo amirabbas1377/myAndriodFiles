@@ -15,6 +15,7 @@ class SecondActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         textView2.text = intent.getStringExtra("message")
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         returnButton()
     }
 

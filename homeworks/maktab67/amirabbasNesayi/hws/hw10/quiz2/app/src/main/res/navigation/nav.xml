@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/gameFragment2">
+    <fragment
+        android:id="@+id/gameFragment2"
+        android:name="com.example.quiz.GameFragment"
+        android:label="GameFragment" >
+        <action
+            android:id="@+id/action_gameFragment2_to_cheatingFragment2"
+            app:destination="@id/cheatingFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/cheatingFragment2"
+        android:name="com.example.quiz.CheatingFragment"
+        android:label="CheatingFragment" >
+        <action
+            android:id="@+id/action_cheatingFragment2_to_gameFragment2"
+            app:destination="@id/gameFragment2"
+            app:popUpTo="@id/cheatingFragment2" />
+    </fragment>
+</navigation>

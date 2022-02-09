@@ -53,22 +53,12 @@ class MainActivity : AppCompatActivity() {
         binding.button.setOnClickListener {
             val text = binding.editTextView.text.toString()
 
-            val intent = Intent()
-            intent.action = Intent.ACTION_SEND
-            intent.type = "text/plain"
-            //intent.putExtra("message", text)
-            intent.putExtra(Intent.EXTRA_TEXT, text)
+            val intent = Intent(this, SecondActivity::class.java)
+//            intent.action = Intent.ACTION_SEND
+//            intent.type = "text/plain"
+//            intent.putExtra(Intent.EXTRA_TEXT, text)
             startActivity(intent)
         }
     }
-
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//
-//        if (requestCode == 12 && resultCode == RESULT_OK){
-//            val result = data!!.getStringExtra("result")
-//            textView.text = result
-//        }
-//    }
 
 }
